@@ -82,7 +82,7 @@
       vec2 size=vec2(width,width*currentAspect*.58943);
       vec2 p=(uv-vec2(.5,.465))/size+.5;
       float m=mask(p);
-      // A raised, tone-on-tone relief: its face remains the very same woven fabric.
+      // A raised, tone-on-tone relief: its face remains the very same woven fabric.assets/silk.webpsilk.webpassets/silk.webp
       float dx=mask(p+vec2(.014,0.))-mask(p-vec2(.014,0.));
       float dy=mask(p+vec2(0.,.020))-mask(p-vec2(0.,.020));
       float relief=dx*.40+dy*.75;
