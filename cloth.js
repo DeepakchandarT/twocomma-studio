@@ -82,7 +82,7 @@
       vec2 size=vec2(width,width*currentAspect*.58943);
       vec2 p=(uv-vec2(.5,.465))/size+.5;
       float m=mask(p);
-      // A raised, tone-on-tone relief: its face remains the very same woven fabric.assets/silk.webpsilk.webpassets/silk.webp
+      // A raised, tone-on-tone relief: its face remains the very same woven fabric.
       float dx=mask(p+vec2(.014,0.))-mask(p-vec2(.014,0.));
       float dy=mask(p+vec2(0.,.020))-mask(p-vec2(0.,.020));
       float relief=dx*.40+dy*.75;
@@ -133,7 +133,7 @@
     // Soften the height field into a rounded bevel, rather than a hard printed edge.
     ctx.filter='blur(8px)';markPaths.forEach(path=>ctx.fill(new Path2D(path)));ctx.filter='none';
     texture(1,'mark',mask);
-    const photo=new Image();photo.onload=()=>{try{texture(0,'fabric',photo);ready=true;}catch{fallback();}};photo.onerror=fallback;photo.src='assets/silk.webp';
+    const photo=new Image();photo.onload=()=>{try{texture(0,'fabric',photo);ready=true;}catch{fallback();}};photo.onerror=fallback;photo.src='silk.webp';
     gl.enable(gl.DEPTH_TEST);gl.depthFunc(gl.LEQUAL);gl.disable(gl.CULL_FACE);gl.clearColor(0,0,0,0);
     canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();fallback();});
     function drawFallback(t,p,destination,angle,less){
